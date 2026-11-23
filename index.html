@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Results</title>
+</head>
+
+<body>
+
+    <h1>Student Results</h1>
+
+    <button onclick="showResults()">Enter Results</button>
+
+    <p id="results"></p>
+
+    <script>
+
+        function showResults() {
+
+            let numberOfSubjects = prompt("How many subjects do you take?");
+
+            let results = "";
+
+            for (let i = 1; i <= numberOfSubjects; i++) {
+
+                let subject = prompt("Enter the name of subject " + i);
+
+                let mark = prompt("Enter your mark for " + subject);
+
+                results = results + "Subject: " + subject +
+                " - Mark: " + mark + "<br><br>";
+
+            }
+
+            document.getElementById("results").innerHTML = results;
+
+        }
+
+    </script>
+
+</body>
+</html>
